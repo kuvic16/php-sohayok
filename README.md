@@ -1,4 +1,4 @@
-# php-utils
+# php-sohayok
 
 Utility functions for PHP.
 
@@ -10,3 +10,13 @@ Utility functions for PHP.
 ## DateUtils
 
 - Validate a date string
+
+## DateUtils
+
+### Validate a date string
+
+## NumberUtils
+
+### formatted_number_bn
+
+Any number can formatted into bangladeshi currency format

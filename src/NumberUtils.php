@@ -37,12 +37,16 @@ class NumberUtils
     /**
      * Get formatted number for bangladesh
      * 
-     * @param null|double $number
+     * @param null|float|string|int $number
      * 
      * @return string
      */
     public static function formatted_number_bn($number)
     {
+        if(is_string($number)) {
+            $number = floatval(str_replace(",", "", $number));
+        }
+
         if(!is_numeric($number)) {
             return null;
         }
