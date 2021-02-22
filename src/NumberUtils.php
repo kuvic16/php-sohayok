@@ -17,7 +17,7 @@ class NumberUtils
      * 
      * @var string $_CRORE_LABEL
      */
-    private static $_CRORE_LABEL = 'Crore';    
+    private static $_CRORE_LABEL = 'crore';
 
     /**
      * A varibale for lac
@@ -31,7 +31,7 @@ class NumberUtils
      * 
      * @var string $_LAC_LABEL
      */
-    private static $_LAC_LABEL = 'Lac';
+    private static $_LAC_LABEL = 'lac';
 
 
     /**
@@ -47,17 +47,28 @@ class NumberUtils
             return null;
         }
 
-        $n_number = 0;
+        $division_by = 0; $label = "";
         if($number >= self::$_CRORE) {
-            $n_number = $number / self::$_CRORE;
-            return round($n_number, 2) . ' ' . self::$_CRORE_LABEL;
+            $division_by = self::$_CRORE;
+            $label = self::$_CRORE_LABEL;            
         } elseif($number >= self::$_LAC) {
-            $n_number = $number / self::$_LAC;
-            return round($n_number, 2) . ' ' . self::$_LAC_LABEL;
+            $division_by = self::$_LAC;
+            $label = self::$_LAC_LABEL;
         }
-        return $n_number;
+
+        if($division_by > 0) {
+            $n_number = $number / $division_by;
+            $f_number = "";
+            if(is_int($n_number)) {
+                $f_number = number_format($n_number, 0);
+            }else {
+                $f_number = number_format(floatval(round($n_number, 2)), 2);
+            }
+            return $f_number . ' ' . $label;
+        }
+        return number_format($number, 2);
     }
 }
 
-//$result = NumberUtils::formatted_number_bn(1110000);
+//$result = NumberUtils::formatted_number_bn(12341);
 //var_dump($result);
