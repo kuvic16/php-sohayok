@@ -1,0 +1,19 @@
+{
+    "name": "kuvic16/php-utils",
+    "description": "A php utils library for common usage",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shaiful Islam",
+            "email": "kuvic16@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"kuvic16\\PhpUtils\\": "src/"}
+    },
+    "require": {
+        "nesbot/carbon": "^2.45"
+    }
+}
