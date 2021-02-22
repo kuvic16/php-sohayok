@@ -9,7 +9,6 @@
             "email": "kuvic16@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"kuvic16\\PhpSohayok\\": "src/"}
     },
