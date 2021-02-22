@@ -1,5 +1,5 @@
 {
-    "name": "kuvic16/php-utils",
+    "name": "kuvic16/php-sohayok",
     "description": "A php utils library for common usage",
     "type": "library",
     "license": "MIT",
@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
-        "psr-4": {"kuvic16\\PhpUtils\\": "src/"}
+        "psr-4": {"kuvic16\\PhpSohayok\\": "src/"}
     },
     "require": {
         "nesbot/carbon": "^2.45"

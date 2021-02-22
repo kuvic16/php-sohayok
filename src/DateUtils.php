@@ -1,6 +1,6 @@
 <?php
 
-namespace kuvic16\PhpUtils;
+namespace kuvic16\PhpSohayok;
 
 use Carbon\Carbon;
 
