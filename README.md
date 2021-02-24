@@ -19,4 +19,9 @@ Utility functions for PHP.
 
 ### formatted_number_bn
 
-Any number can formatted into bangladeshi currency format
+Any number can formatted into bangladeshi currency format.
+
+```
+input: 100000
+output: 1 Lac
+```
